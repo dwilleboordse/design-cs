@@ -89,9 +89,9 @@ export async function saveState(state: AppState): Promise<void> {
     }
     return;
   }
-  // Production without KV: silently no-op so the UI remains usable as a viewer.
-  // README explains how to enable KV for persistence.
-  console.warn("[storage] No Redis configured and filesystem read-only; save ignored.");
+  throw new Error(
+    "Storage not configured. Connect Upstash Redis in your Vercel project: Storage → Marketplace → Upstash → Connect."
+  );
 }
 
 export function storageMode(): "kv" | "file" | "readonly-seed" {

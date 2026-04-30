@@ -8,9 +8,10 @@ export const dynamic = "force-dynamic";
 export async function GET() {
   try {
     const state = await loadState();
-    return NextResponse.json(state, {
-      headers: { "x-storage-mode": storageMode() },
-    });
+    return NextResponse.json(
+      { state, storageMode: storageMode() },
+      { headers: { "x-storage-mode": storageMode() } }
+    );
   } catch (e: any) {
     return NextResponse.json({ error: e?.message || "load failed" }, { status: 500 });
   }

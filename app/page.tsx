@@ -8,6 +8,7 @@ import { WorkloadSidebar } from "@/components/workload-sidebar";
 import { SettingsDrawer } from "@/components/settings-drawer";
 import { InsightsBar } from "@/components/insights-bar";
 import { DndProvider } from "@/components/dnd-provider";
+import { StorageBanner } from "@/components/storage-banner";
 
 export default function Page() {
   const load = useStore((s) => s.load);
@@ -32,6 +33,7 @@ export default function Page() {
     <DndProvider>
       <div className="min-h-screen flex flex-col">
         <Header onOpenSettings={() => setSettingsOpen(true)} />
+        <StorageBanner />
         <InsightsBar />
         <div className="flex-1 flex min-h-0">
           <main className="flex-1 overflow-auto scrollbar p-6">

@@ -9,6 +9,7 @@ type Store = {
   loading: boolean;
   saving: boolean;
   error: string | null;
+  storageMode: "kv" | "file" | "readonly-seed" | null;
   load: () => Promise<void>;
   save: () => Promise<void>;
   setState: (next: AppState) => void;
@@ -68,14 +69,17 @@ export const useStore = create<Store>((set, get) => ({
   loading: false,
   saving: false,
   error: null,
+  storageMode: null,
 
   async load() {
     set({ loading: true, error: null });
     try {
       const r = await fetch("/api/data", { cache: "no-store" });
       if (!r.ok) throw new Error("Failed to load data");
-      const data = (await r.json()) as AppState;
-      set({ state: data, loading: false });
+      const payload = await r.json();
+      const data = (payload.state ?? payload) as AppState;
+      const mode = (payload.storageMode || r.headers.get("x-storage-mode") || null) as Store["storageMode"];
+      set({ state: data, storageMode: mode, loading: false });
     } catch (e: any) {
       set({ error: e?.message || "Load failed", loading: false });
     }
@@ -84,14 +88,17 @@ export const useStore = create<Store>((set, get) => ({
   async save() {
     const s = get().state;
     if (!s) return;
-    set({ saving: true });
+    set({ saving: true, error: null });
     try {
       const r = await fetch("/api/data", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(s),
       });
-      if (!r.ok) throw new Error("Failed to save");
+      if (!r.ok) {
+        const payload = await r.json().catch(() => ({}));
+        throw new Error(payload.error || `Save failed (HTTP ${r.status})`);
+      }
       set({ saving: false });
     } catch (e: any) {
       set({ saving: false, error: e?.message || "Save failed" });

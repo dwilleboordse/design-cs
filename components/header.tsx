@@ -7,10 +7,19 @@ import { MonthPicker } from "./month-picker";
 export function Header({ onOpenSettings }: { onOpenSettings: () => void }) {
   const state = useStore((s) => s.state);
   const saving = useStore((s) => s.saving);
+  const error = useStore((s) => s.error);
+  const mode = useStore((s) => s.storageMode);
   const addMonth = useStore((s) => s.addMonth);
   const setStateAll = useStore((s) => s.setState);
 
   if (!state) return null;
+  const status = error
+    ? { text: "Not saved", cls: "text-danger" }
+    : saving
+      ? { text: "Saving…", cls: "text-muted" }
+      : mode === "readonly-seed"
+        ? { text: "Read-only", cls: "text-danger" }
+        : { text: "Saved", cls: "text-success" };
 
   function exportJSON() {
     const blob = new Blob([JSON.stringify(state, null, 2)], { type: "application/json" });
@@ -89,7 +98,7 @@ export function Header({ onOpenSettings }: { onOpenSettings: () => void }) {
         >
           <Settings size={14} /> Settings
         </button>
-        <div className="text-xs text-muted w-16 text-right">{saving ? "Saving…" : "Saved"}</div>
+        <div className={`text-xs ${status.cls} w-20 text-right tabular-nums`}>{status.text}</div>
       </div>
     </header>
   );
