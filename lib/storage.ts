@@ -27,9 +27,28 @@ function migrate(state: any): AppState {
 const KEY = "design-cs-allocation:state:v1";
 const DEV_FILE = path.join(process.cwd(), "data", "dev-state.json");
 
+function findEnvBySuffix(suffixes: string[], excludeSuffixes: string[] = []): string | undefined {
+  for (const key of Object.keys(process.env)) {
+    if (excludeSuffixes.some((s) => key.endsWith(s))) continue;
+    if (suffixes.some((s) => key.endsWith(s))) {
+      const v = process.env[key];
+      if (v) return v;
+    }
+  }
+  return undefined;
+}
+
+function resolveRedisCreds(): { url?: string; token?: string } {
+  const url = findEnvBySuffix(["KV_REST_API_URL", "UPSTASH_REDIS_REST_URL"]);
+  const token = findEnvBySuffix(
+    ["KV_REST_API_TOKEN", "UPSTASH_REDIS_REST_TOKEN"],
+    ["KV_REST_API_READ_ONLY_TOKEN"]
+  );
+  return { url, token };
+}
+
 function getRedis(): Redis | null {
-  const url = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
-  const token = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
+  const { url, token } = resolveRedisCreds();
   if (!url || !token) return null;
   return new Redis({ url, token });
 }
