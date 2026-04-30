@@ -1,0 +1,1605 @@
+{
+  "version": 2,
+  "workingDaysPerMonth": 22,
+  "strategists": [
+    {
+      "id": "s_e4f71c4d",
+      "name": "Aimey / Firas"
+    },
+    {
+      "id": "s_60c99e4e",
+      "name": "Alex"
+    },
+    {
+      "id": "s_e87beca3",
+      "name": "Cooper"
+    },
+    {
+      "id": "s_3e966bc5",
+      "name": "Elish"
+    },
+    {
+      "id": "s_4b3700a0",
+      "name": "Emma/Firas"
+    },
+    {
+      "id": "s_b7251203",
+      "name": "Ethan"
+    },
+    {
+      "id": "s_f2aff4c6",
+      "name": "Firas"
+    },
+    {
+      "id": "s_01336e1a",
+      "name": "Isla"
+    },
+    {
+      "id": "s_38e4250a",
+      "name": "Kris"
+    },
+    {
+      "id": "s_50a67f54",
+      "name": "Kristian"
+    },
+    {
+      "id": "s_49b8e4d1",
+      "name": "Lara"
+    },
+    {
+      "id": "s_0889dbd2",
+      "name": "LJ"
+    },
+    {
+      "id": "s_8de9e0c0",
+      "name": "Lorenzo"
+    }
+  ],
+  "designers": [
+    {
+      "id": "d_64b3a105",
+      "name": "Carolina",
+      "dailyCapacity": 8
+    },
+    {
+      "id": "d_62bfa240",
+      "name": "Chelsea",
+      "dailyCapacity": 8
+    },
+    {
+      "id": "d_0f8332de",
+      "name": "Chona",
+      "dailyCapacity": 8
+    },
+    {
+      "id": "d_61826609",
+      "name": "Noorullah",
+      "dailyCapacity": 8
+    },
+    {
+      "id": "d_fa41630e",
+      "name": "Paula",
+      "dailyCapacity": 8
+    }
+  ],
+  "editors": [
+    {
+      "id": "e_9338245e",
+      "name": "Amna",
+      "dailyCapacity": 5
+    },
+    {
+      "id": "e_2ee0d530",
+      "name": "Angel",
+      "dailyCapacity": 5
+    },
+    {
+      "id": "e_4da41d16",
+      "name": "Angeluo",
+      "dailyCapacity": 5
+    },
+    {
+      "id": "e_020d7ef5",
+      "name": "David",
+      "dailyCapacity": 5
+    },
+    {
+      "id": "e_81c0e03e",
+      "name": "Huzaifa",
+      "dailyCapacity": 5
+    },
+    {
+      "id": "e_e7b3c5f8",
+      "name": "Kief",
+      "dailyCapacity": 5
+    },
+    {
+      "id": "e_c4ecfab5",
+      "name": "Michelle",
+      "dailyCapacity": 5
+    },
+    {
+      "id": "e_838511d2",
+      "name": "Roshan",
+      "dailyCapacity": 5
+    }
+  ],
+  "months": {
+    "2026-02": {
+      "id": "2026-02",
+      "label": "February 2026",
+      "groups": [
+        {
+          "id": "cs_4a30d7ff",
+          "strategistId": "s_e4f71c4d",
+          "brands": [
+            {
+              "id": "br_0bee3e496f",
+              "name": "Moov",
+              "statics": 10,
+              "videos": 35,
+              "designerIds": [
+                "d_62bfa240"
+              ],
+              "editorIds": [
+                "e_020d7ef5"
+              ]
+            },
+            {
+              "id": "br_c32c7dcd8d",
+              "name": "Francis",
+              "statics": 10,
+              "videos": 10,
+              "designerIds": [
+                "d_62bfa240"
+              ],
+              "editorIds": [
+                "e_020d7ef5"
+              ]
+            },
+            {
+              "id": "br_c53cc85715",
+              "name": "Restfulness",
+              "statics": 40,
+              "videos": 0,
+              "designerIds": [
+                "d_62bfa240"
+              ],
+              "editorIds": []
+            }
+          ]
+        },
+        {
+          "id": "cs_b9dc16bd",
+          "strategistId": "s_60c99e4e",
+          "brands": [
+            {
+              "id": "br_19ceab9f61",
+              "name": "Artemis",
+              "statics": 20,
+              "videos": 0,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": []
+            },
+            {
+              "id": "br_75af7bc219",
+              "name": "Abriga",
+              "statics": 10,
+              "videos": 90,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_c4ecfab5"
+              ]
+            },
+            {
+              "id": "br_c019ced82c",
+              "name": "Moov Germany",
+              "statics": 8,
+              "videos": 14,
+              "designerIds": [
+                "d_62bfa240"
+              ],
+              "editorIds": [
+                "e_020d7ef5"
+              ]
+            },
+            {
+              "id": "br_63ebc2bfab",
+              "name": "Eunoia Copenhagen",
+              "statics": 7,
+              "videos": 12,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_81c0e03e"
+              ]
+            },
+            {
+              "id": "br_852e0691f4",
+              "name": "NeuroMd- delayed",
+              "statics": 0,
+              "videos": 0,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_c4ecfab5"
+              ]
+            },
+            {
+              "id": "br_8e3a6bba6c",
+              "name": "My Immunity- delayed",
+              "statics": 0,
+              "videos": 0,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_c4ecfab5"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_1680eff4",
+          "strategistId": "s_e87beca3",
+          "brands": [
+            {
+              "id": "br_becf122db0",
+              "name": "Gamelab",
+              "statics": 17,
+              "videos": 10,
+              "designerIds": [
+                "d_0f8332de"
+              ],
+              "editorIds": [
+                "e_81c0e03e"
+              ]
+            },
+            {
+              "id": "br_29e12e5165",
+              "name": "Sprinkle",
+              "statics": 24,
+              "videos": 30,
+              "designerIds": [
+                "d_0f8332de"
+              ],
+              "editorIds": [
+                "e_81c0e03e"
+              ]
+            },
+            {
+              "id": "br_ca70a5c26a",
+              "name": "Boostiva",
+              "statics": 7,
+              "videos": 12,
+              "designerIds": [
+                "d_0f8332de"
+              ],
+              "editorIds": [
+                "e_81c0e03e"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_3d3364da",
+          "strategistId": "s_3e966bc5",
+          "brands": [
+            {
+              "id": "br_ae026f0e06",
+              "name": "Levaye Cosmetics",
+              "statics": 25,
+              "videos": 19,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            },
+            {
+              "id": "br_8f6b976cc2",
+              "name": "Meroda",
+              "statics": 0,
+              "videos": 20,
+              "designerIds": [],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            },
+            {
+              "id": "br_04e2a85bb0",
+              "name": "Virage London",
+              "statics": 8,
+              "videos": 12,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            },
+            {
+              "id": "br_7295756ccc",
+              "name": "Veauty",
+              "statics": 8,
+              "videos": 14,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            },
+            {
+              "id": "br_57adf56ffa",
+              "name": "Legacare",
+              "statics": 8,
+              "videos": 12,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_50b3a3f7",
+          "strategistId": "s_4b3700a0",
+          "brands": [
+            {
+              "id": "br_2e2faef422",
+              "name": "Petree",
+              "statics": 5,
+              "videos": 17,
+              "designerIds": [
+                "d_0f8332de"
+              ],
+              "editorIds": [
+                "e_4da41d16"
+              ]
+            },
+            {
+              "id": "br_ab77a7f81b",
+              "name": "Cook and Pan",
+              "statics": 10,
+              "videos": 18,
+              "designerIds": [
+                "d_0f8332de"
+              ],
+              "editorIds": [
+                "e_4da41d16"
+              ]
+            },
+            {
+              "id": "br_a3ef835701",
+              "name": "Herdelica",
+              "statics": 8,
+              "videos": 0,
+              "designerIds": [
+                "d_0f8332de"
+              ],
+              "editorIds": [
+                "e_4da41d16"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_3d5bfa1c",
+          "strategistId": "s_50a67f54",
+          "brands": [
+            {
+              "id": "br_d0d72e0b02",
+              "name": "BreatheFree",
+              "statics": 8,
+              "videos": 12,
+              "designerIds": [
+                "d_61826609"
+              ],
+              "editorIds": [
+                "e_4da41d16"
+              ]
+            },
+            {
+              "id": "br_bfe32deac5",
+              "name": "Bloomin",
+              "statics": 7,
+              "videos": 12,
+              "designerIds": [
+                "d_61826609"
+              ],
+              "editorIds": [
+                "e_4da41d16"
+              ]
+            },
+            {
+              "id": "br_afee712a1d",
+              "name": "Perfect White Tees",
+              "statics": 25,
+              "videos": 0,
+              "designerIds": [
+                "d_61826609"
+              ],
+              "editorIds": []
+            },
+            {
+              "id": "br_67aabe5f2a",
+              "name": "Katana-US",
+              "statics": 12,
+              "videos": 21,
+              "designerIds": [
+                "d_61826609"
+              ],
+              "editorIds": [
+                "e_4da41d16"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_40d96878",
+          "strategistId": "s_b7251203",
+          "brands": [
+            {
+              "id": "br_92662ebaeb",
+              "name": "TT",
+              "statics": 20,
+              "videos": 20,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_e7b3c5f8"
+              ]
+            },
+            {
+              "id": "br_50898a9fe6",
+              "name": "Minoa",
+              "statics": 12,
+              "videos": 25,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_e7b3c5f8"
+              ]
+            },
+            {
+              "id": "br_3f59072346",
+              "name": "Cherries",
+              "statics": 12,
+              "videos": 25,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": [
+                "e_e7b3c5f8"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "2026-03": {
+      "id": "2026-03",
+      "label": "March 2026",
+      "groups": [
+        {
+          "id": "cs_8c1c7220",
+          "strategistId": "s_f2aff4c6",
+          "brands": [
+            {
+              "id": "br_3ad827df6d",
+              "name": "Petree",
+              "statics": 5,
+              "videos": 17,
+              "designerIds": [
+                "d_62bfa240"
+              ],
+              "editorIds": [
+                "e_020d7ef5"
+              ]
+            },
+            {
+              "id": "br_bdd17c2c7f",
+              "name": "Cook and Pan",
+              "statics": 10,
+              "videos": 18,
+              "designerIds": [
+                "d_62bfa240"
+              ],
+              "editorIds": [
+                "e_e7b3c5f8"
+              ]
+            },
+            {
+              "id": "br_5bbe31da80",
+              "name": "Rosalyne",
+              "statics": 10,
+              "videos": 10,
+              "designerIds": [
+                "d_62bfa240"
+              ],
+              "editorIds": [
+                "e_020d7ef5"
+              ]
+            },
+            {
+              "id": "br_7412a02791",
+              "name": "Restfulness",
+              "statics": 40,
+              "videos": 0,
+              "designerIds": [
+                "d_62bfa240"
+              ],
+              "editorIds": []
+            }
+          ]
+        },
+        {
+          "id": "cs_83c96cf8",
+          "strategistId": "s_60c99e4e",
+          "brands": [
+            {
+              "id": "br_a32e06e0b0",
+              "name": "Artemis",
+              "statics": 20,
+              "videos": 0,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": []
+            },
+            {
+              "id": "br_3a2582bcab",
+              "name": "Abriga",
+              "statics": 10,
+              "videos": 90,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_c4ecfab5"
+              ]
+            },
+            {
+              "id": "br_f7ce4a6d32",
+              "name": "Moov Germany",
+              "statics": 8,
+              "videos": 14,
+              "designerIds": [
+                "d_62bfa240"
+              ],
+              "editorIds": [
+                "e_020d7ef5"
+              ]
+            },
+            {
+              "id": "br_9bc1199ebc",
+              "name": "Eunoia Copenhagen",
+              "statics": 7,
+              "videos": 12,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_81c0e03e"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_0b550e1a",
+          "strategistId": "s_e87beca3",
+          "brands": [
+            {
+              "id": "br_c40a919aa3",
+              "name": "Gamelab",
+              "statics": 17,
+              "videos": 10,
+              "designerIds": [
+                "d_0f8332de"
+              ],
+              "editorIds": [
+                "e_81c0e03e"
+              ]
+            },
+            {
+              "id": "br_e8956c4a88",
+              "name": "Sprinkle",
+              "statics": 24,
+              "videos": 30,
+              "designerIds": [
+                "d_0f8332de"
+              ],
+              "editorIds": [
+                "e_81c0e03e"
+              ]
+            },
+            {
+              "id": "br_461820256d",
+              "name": "Cozy Memories",
+              "statics": 10,
+              "videos": 13,
+              "designerIds": [
+                "d_0f8332de"
+              ],
+              "editorIds": [
+                "e_81c0e03e"
+              ]
+            },
+            {
+              "id": "br_fbb3fc099b",
+              "name": "Boostiva",
+              "statics": 7,
+              "videos": 12,
+              "designerIds": [
+                "d_0f8332de"
+              ],
+              "editorIds": [
+                "e_81c0e03e"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_a583c929",
+          "strategistId": "s_3e966bc5",
+          "brands": [
+            {
+              "id": "br_c177509f1c",
+              "name": "Levaye Cosmetics",
+              "statics": 25,
+              "videos": 0,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": []
+            },
+            {
+              "id": "br_016e741fc0",
+              "name": "Meroda",
+              "statics": 0,
+              "videos": 20,
+              "designerIds": [],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            },
+            {
+              "id": "br_2618b87fc4",
+              "name": "Virage London",
+              "statics": 8,
+              "videos": 12,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            },
+            {
+              "id": "br_085530dae0",
+              "name": "Veauty",
+              "statics": 8,
+              "videos": 14,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            },
+            {
+              "id": "br_39b603c69b",
+              "name": "Francis",
+              "statics": 10,
+              "videos": 10,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_d1968799",
+          "strategistId": "s_50a67f54",
+          "brands": [
+            {
+              "id": "br_745bc745b4",
+              "name": "BreatheFree",
+              "statics": 8,
+              "videos": 12,
+              "designerIds": [
+                "d_61826609"
+              ],
+              "editorIds": [
+                "e_4da41d16"
+              ]
+            },
+            {
+              "id": "br_336c45bfe5",
+              "name": "Bloomin",
+              "statics": 7,
+              "videos": 12,
+              "designerIds": [
+                "d_61826609"
+              ],
+              "editorIds": [
+                "e_4da41d16"
+              ]
+            },
+            {
+              "id": "br_020c9fab44",
+              "name": "Perfect White Tees",
+              "statics": 25,
+              "videos": 0,
+              "designerIds": [
+                "d_61826609"
+              ],
+              "editorIds": []
+            },
+            {
+              "id": "br_b4e8cae886",
+              "name": "Katana-US",
+              "statics": 12,
+              "videos": 21,
+              "designerIds": [
+                "d_61826609"
+              ],
+              "editorIds": [
+                "e_4da41d16"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_34a2f29f",
+          "strategistId": "s_8de9e0c0",
+          "brands": [
+            {
+              "id": "br_647c1bd869",
+              "name": "TT",
+              "statics": 10,
+              "videos": 10,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_e7b3c5f8"
+              ]
+            },
+            {
+              "id": "br_3abc4a27ed",
+              "name": "Minoa",
+              "statics": 12,
+              "videos": 25,
+              "designerIds": [
+                "d_0f8332de"
+              ],
+              "editorIds": [
+                "e_e7b3c5f8"
+              ]
+            },
+            {
+              "id": "br_76cd029459",
+              "name": "Cherries",
+              "statics": 12,
+              "videos": 25,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": [
+                "e_e7b3c5f8"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_63a8c8f6",
+          "strategistId": "s_0889dbd2",
+          "brands": [
+            {
+              "id": "br_ffd91e0435",
+              "name": "Dr. Kegel",
+              "statics": 0,
+              "videos": 35,
+              "designerIds": [],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            },
+            {
+              "id": "br_7a9564ed1f",
+              "name": "DDU ADs",
+              "statics": 5,
+              "videos": 5,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_020d7ef5"
+              ]
+            },
+            {
+              "id": "br_0a11ec42ea",
+              "name": "Track a Cell",
+              "statics": 10,
+              "videos": 10,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": [
+                "e_4da41d16"
+              ]
+            },
+            {
+              "id": "br_412f021ef4",
+              "name": "TibaKids",
+              "statics": 10,
+              "videos": 10,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_4da41d16"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_5be687af",
+          "strategistId": "s_49b8e4d1",
+          "brands": [
+            {
+              "id": "br_bd2e891ab1",
+              "name": "Profa-clean",
+              "statics": 10,
+              "videos": 10,
+              "designerIds": [
+                "d_61826609"
+              ],
+              "editorIds": [
+                "e_020d7ef5"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "2026-04": {
+      "id": "2026-04",
+      "label": "April 2026",
+      "groups": [
+        {
+          "id": "cs_6dee2436",
+          "strategistId": "s_60c99e4e",
+          "brands": [
+            {
+              "id": "br_5889efb66f",
+              "name": "Abriga",
+              "statics": 10,
+              "videos": 90,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_e7b3c5f8"
+              ]
+            },
+            {
+              "id": "br_0862bca258",
+              "name": "Atria",
+              "statics": 0,
+              "videos": 0,
+              "designerIds": [],
+              "editorIds": []
+            },
+            {
+              "id": "br_41562859c5",
+              "name": "Sprinkle- Assist",
+              "statics": 0,
+              "videos": 0,
+              "designerIds": [],
+              "editorIds": []
+            },
+            {
+              "id": "br_d226d8027c",
+              "name": "Gamelab- Assist",
+              "statics": 0,
+              "videos": 0,
+              "designerIds": [],
+              "editorIds": []
+            },
+            {
+              "id": "br_b80b4ae803",
+              "name": "Glowholick",
+              "statics": 0,
+              "videos": 40,
+              "designerIds": [],
+              "editorIds": [
+                "e_2ee0d530",
+                "e_e7b3c5f8"
+              ]
+            },
+            {
+              "id": "br_4d84d82805",
+              "name": "Sprinkle- with Alex",
+              "statics": 24,
+              "videos": 30,
+              "designerIds": [
+                "d_0f8332de"
+              ],
+              "editorIds": [
+                "e_020d7ef5"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_8f458f88",
+          "strategistId": "s_e87beca3",
+          "brands": [
+            {
+              "id": "br_68ea60a47d",
+              "name": "Gamelab- with Alex",
+              "statics": 17,
+              "videos": 10,
+              "designerIds": [
+                "d_0f8332de"
+              ],
+              "editorIds": [
+                "e_81c0e03e"
+              ]
+            },
+            {
+              "id": "br_67e3dbf46d",
+              "name": "Boostiva",
+              "statics": 7,
+              "videos": 12,
+              "designerIds": [
+                "d_0f8332de"
+              ],
+              "editorIds": [
+                "e_81c0e03e"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_e3382f68",
+          "strategistId": "s_3e966bc5",
+          "brands": [
+            {
+              "id": "br_94dfa984ae",
+              "name": "Levaye Cosmetics",
+              "statics": 25,
+              "videos": 0,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": []
+            },
+            {
+              "id": "br_a0976a21e7",
+              "name": "Meroda",
+              "statics": 0,
+              "videos": 20,
+              "designerIds": [],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            },
+            {
+              "id": "br_f229b1cde9",
+              "name": "Virage London",
+              "statics": 8,
+              "videos": 12,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_04261b2b",
+          "strategistId": "s_f2aff4c6",
+          "brands": [
+            {
+              "id": "br_a01f14d165",
+              "name": "Petree",
+              "statics": 5,
+              "videos": 17,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_020d7ef5"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_24f5463d",
+          "strategistId": "s_50a67f54",
+          "brands": [
+            {
+              "id": "br_06d2a997df",
+              "name": "BreatheFree",
+              "statics": 8,
+              "videos": 12,
+              "designerIds": [
+                "d_61826609"
+              ],
+              "editorIds": [
+                "e_4da41d16"
+              ]
+            },
+            {
+              "id": "br_18c51a817b",
+              "name": "Bloomin",
+              "statics": 0,
+              "videos": 40,
+              "designerIds": [],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            },
+            {
+              "id": "br_36917629b8",
+              "name": "Awesome Aminos",
+              "statics": 13,
+              "videos": 13,
+              "designerIds": [
+                "d_61826609"
+              ],
+              "editorIds": [
+                "e_838511d2"
+              ]
+            },
+            {
+              "id": "br_0c926f1545",
+              "name": "Perfect White Tees",
+              "statics": 25,
+              "videos": 0,
+              "designerIds": [
+                "d_61826609"
+              ],
+              "editorIds": []
+            },
+            {
+              "id": "br_5bcb11472f",
+              "name": "Katana-US",
+              "statics": 12,
+              "videos": 21,
+              "designerIds": [
+                "d_61826609"
+              ],
+              "editorIds": [
+                "e_4da41d16"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_6a42ff9d",
+          "strategistId": "s_8de9e0c0",
+          "brands": [
+            {
+              "id": "br_f2c5d5b0f0",
+              "name": "TT",
+              "statics": 20,
+              "videos": 20,
+              "designerIds": [
+                "d_0f8332de"
+              ],
+              "editorIds": [
+                "e_9338245e"
+              ]
+            },
+            {
+              "id": "br_e27ae3d412",
+              "name": "Minoa",
+              "statics": 12,
+              "videos": 25,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": [
+                "e_81c0e03e"
+              ]
+            },
+            {
+              "id": "br_f68c8249b7",
+              "name": "DDU ADs",
+              "statics": 5,
+              "videos": 5,
+              "designerIds": [
+                "d_0f8332de"
+              ],
+              "editorIds": []
+            }
+          ]
+        },
+        {
+          "id": "cs_8b9e415d",
+          "strategistId": "s_0889dbd2",
+          "brands": [
+            {
+              "id": "br_f170711fed",
+              "name": "Dr. Kegel",
+              "statics": 0,
+              "videos": 35,
+              "designerIds": [],
+              "editorIds": [
+                "e_020d7ef5"
+              ]
+            },
+            {
+              "id": "br_14d054c3f4",
+              "name": "Track a Cell",
+              "statics": 10,
+              "videos": 15,
+              "designerIds": [
+                "d_61826609"
+              ],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            },
+            {
+              "id": "br_78b7a7378f",
+              "name": "Francis- Elish support",
+              "statics": 10,
+              "videos": 10,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": [
+                "e_81c0e03e"
+              ]
+            },
+            {
+              "id": "br_1b1876c787",
+              "name": "TibaKids",
+              "statics": 8,
+              "videos": 12,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_5dba96b2",
+          "strategistId": "s_49b8e4d1",
+          "brands": [
+            {
+              "id": "br_ba44e7b587",
+              "name": "Rosalyne",
+              "statics": 6,
+              "videos": 14,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_020d7ef5"
+              ]
+            },
+            {
+              "id": "br_55f7175a24",
+              "name": "Glowora",
+              "statics": 3,
+              "videos": 12,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_81c0e03e"
+              ]
+            },
+            {
+              "id": "br_2aeb14b2ac",
+              "name": "Restfulness",
+              "statics": 40,
+              "videos": 0,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": []
+            }
+          ]
+        },
+        {
+          "id": "cs_8cbe92a6",
+          "strategistId": "s_01336e1a",
+          "brands": [
+            {
+              "id": "br_22ad49200b",
+              "name": "Cherries - Elish support",
+              "statics": 0,
+              "videos": 37,
+              "designerIds": [],
+              "editorIds": [
+                "e_9338245e"
+              ]
+            },
+            {
+              "id": "br_f8e3253531",
+              "name": "Biofit - Elish support",
+              "statics": 15,
+              "videos": 9,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": [
+                "e_9338245e"
+              ]
+            },
+            {
+              "id": "br_5d7bd1c450",
+              "name": "Cozy Memories - Elish support",
+              "statics": 10,
+              "videos": 10,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": [
+                "e_020d7ef5"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "2026-05": {
+      "id": "2026-05",
+      "label": "May 2026",
+      "groups": [
+        {
+          "id": "cs_d05b2b4d",
+          "strategistId": "s_60c99e4e",
+          "brands": [
+            {
+              "id": "br_74b901ce35",
+              "name": "Abriga",
+              "statics": 10,
+              "videos": 90,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_e7b3c5f8"
+              ]
+            },
+            {
+              "id": "br_520953d1a7",
+              "name": "Atria",
+              "statics": 0,
+              "videos": 0,
+              "designerIds": [],
+              "editorIds": []
+            },
+            {
+              "id": "br_4a3ed2bf7b",
+              "name": "Sprinkle",
+              "statics": 24,
+              "videos": 30,
+              "designerIds": [
+                "d_0f8332de"
+              ],
+              "editorIds": [
+                "e_e7b3c5f8"
+              ]
+            },
+            {
+              "id": "br_75eff55073",
+              "name": "Gamelab- Pause",
+              "statics": 17,
+              "videos": 10,
+              "designerIds": [
+                "d_0f8332de"
+              ],
+              "editorIds": []
+            },
+            {
+              "id": "br_37ce4ccc99",
+              "name": "the IQ test",
+              "statics": 10,
+              "videos": 15,
+              "designerIds": [
+                "d_61826609"
+              ],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_2dbf344c",
+          "strategistId": "s_3e966bc5",
+          "brands": [
+            {
+              "id": "br_7e2bd17e4b",
+              "name": "Levaye Cosmetics",
+              "statics": 25,
+              "videos": 0,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": []
+            },
+            {
+              "id": "br_c3d8ee9a61",
+              "name": "Meroda",
+              "statics": 0,
+              "videos": 20,
+              "designerIds": [],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            },
+            {
+              "id": "br_5e38a79b49",
+              "name": "Legacare",
+              "statics": 0,
+              "videos": 6,
+              "designerIds": [],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            },
+            {
+              "id": "br_98019770b5",
+              "name": "Francis",
+              "statics": 10,
+              "videos": 10,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            },
+            {
+              "id": "br_212f5fb406",
+              "name": "Bloomin",
+              "statics": 10,
+              "videos": 40,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            },
+            {
+              "id": "br_82fe00a1c1",
+              "name": "Virage London",
+              "statics": 8,
+              "videos": 12,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": [
+                "e_2ee0d530"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_25ac28c0",
+          "strategistId": "s_f2aff4c6",
+          "brands": [
+            {
+              "id": "br_1ebd49939d",
+              "name": "Petree",
+              "statics": 5,
+              "videos": 17,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_020d7ef5"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_0aaba028",
+          "strategistId": "s_38e4250a",
+          "brands": [
+            {
+              "id": "br_59ac6e8930",
+              "name": "BreatheFree- Elish",
+              "statics": 0,
+              "videos": 20,
+              "designerIds": [
+                "d_61826609"
+              ],
+              "editorIds": [
+                "e_4da41d16"
+              ]
+            },
+            {
+              "id": "br_0957a2497e",
+              "name": "Track a Cell",
+              "statics": 10,
+              "videos": 15,
+              "designerIds": [
+                "d_61826609"
+              ],
+              "editorIds": [
+                "e_4da41d16"
+              ]
+            },
+            {
+              "id": "br_cf62854406",
+              "name": "Awesome Aminos",
+              "statics": 13,
+              "videos": 13,
+              "designerIds": [
+                "d_61826609"
+              ],
+              "editorIds": [
+                "e_838511d2"
+              ]
+            },
+            {
+              "id": "br_67a19bedb0",
+              "name": "Dr. Kegel",
+              "statics": 0,
+              "videos": 35,
+              "designerIds": [],
+              "editorIds": [
+                "e_838511d2"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "cs_fc2076b3",
+          "strategistId": "s_49b8e4d1",
+          "brands": [
+            {
+              "id": "br_3452c74426",
+              "name": "Rosalyne",
+              "statics": 6,
+              "videos": 14,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_020d7ef5"
+              ]
+            },
+            {
+              "id": "br_29cb2fb470",
+              "name": "Glowora",
+              "statics": 3,
+              "videos": 12,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_020d7ef5"
+              ]
+            },
+            {
+              "id": "br_c18aabb2c5",
+              "name": "Zappy",
+              "statics": 0,
+              "videos": 21,
+              "designerIds": [],
+              "editorIds": [
+                "e_020d7ef5"
+              ]
+            },
+            {
+              "id": "br_b87aaa6a86",
+              "name": "Restfulness- Paused",
+              "statics": 40,
+              "videos": 0,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": []
+            }
+          ]
+        },
+        {
+          "id": "cs_0802b1a6",
+          "strategistId": "s_01336e1a",
+          "brands": [
+            {
+              "id": "br_719b7128cb",
+              "name": "Cherries - Elish support",
+              "statics": 0,
+              "videos": 37,
+              "designerIds": [],
+              "editorIds": [
+                "e_9338245e"
+              ]
+            },
+            {
+              "id": "br_3ea5f502d2",
+              "name": "Bambora",
+              "statics": 15,
+              "videos": 10,
+              "designerIds": [
+                "d_64b3a105"
+              ],
+              "editorIds": [
+                "e_9338245e"
+              ]
+            },
+            {
+              "id": "br_a048f36d34",
+              "name": "Francis - Support",
+              "statics": 0,
+              "videos": 0,
+              "designerIds": [],
+              "editorIds": []
+            },
+            {
+              "id": "br_78e459b77a",
+              "name": "Lily and Fox",
+              "statics": 1,
+              "videos": 1,
+              "designerIds": [
+                "d_fa41630e"
+              ],
+              "editorIds": [
+                "e_e7b3c5f8"
+              ]
+            },
+            {
+              "id": "br_9505031c61",
+              "name": "TibaToes",
+              "statics": 5,
+              "videos": 5,
+              "designerIds": [
+                "d_0f8332de"
+              ],
+              "editorIds": [
+                "e_81c0e03e"
+              ]
+            },
+            {
+              "id": "br_9a917a594d",
+              "name": "Cozy Memories",
+              "statics": 10,
+              "videos": 10,
+              "designerIds": [
+                "d_61826609"
+              ],
+              "editorIds": [
+                "e_838511d2"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "currentMonthId": "2026-05"
+}
