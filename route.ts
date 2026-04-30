@@ -4,33 +4,37 @@ import { Redis } from "@upstash/redis";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-export async function GET() {
-  const url = process.env.KV_REST_API_URL || process.env.UPSTASH_REDIS_REST_URL;
-  const token = process.env.KV_REST_API_TOKEN || process.env.UPSTASH_REDIS_REST_TOKEN;
+function findEnvKeyBySuffix(suffixes: string[], excludeSuffixes: string[] = []): string | undefined {
+  for (const key of Object.keys(process.env)) {
+    if (excludeSuffixes.some((s) => key.endsWith(s))) continue;
+    if (suffixes.some((s) => key.endsWith(s))) return key;
+  }
+  return undefined;
+}
 
-  const envSeen = {
-    KV_REST_API_URL: !!process.env.KV_REST_API_URL,
-    KV_REST_API_TOKEN: !!process.env.KV_REST_API_TOKEN,
-    UPSTASH_REDIS_REST_URL: !!process.env.UPSTASH_REDIS_REST_URL,
-    UPSTASH_REDIS_REST_TOKEN: !!process.env.UPSTASH_REDIS_REST_TOKEN,
-    KV_URL: !!process.env.KV_URL,
-    REDIS_URL: !!process.env.REDIS_URL,
-    VERCEL: !!process.env.VERCEL,
-    VERCEL_ENV: process.env.VERCEL_ENV || null,
-  };
+export async function GET() {
+  const urlKey = findEnvKeyBySuffix(["KV_REST_API_URL", "UPSTASH_REDIS_REST_URL"]);
+  const tokenKey = findEnvKeyBySuffix(
+    ["KV_REST_API_TOKEN", "UPSTASH_REDIS_REST_TOKEN"],
+    ["KV_REST_API_READ_ONLY_TOKEN"]
+  );
+  const url = urlKey ? process.env[urlKey] : undefined;
+  const token = tokenKey ? process.env[tokenKey] : undefined;
 
   const result: Record<string, unknown> = {
-    envSeen,
+    discoveredUrlKey: urlKey || null,
+    discoveredTokenKey: tokenKey || null,
     urlPresent: !!url,
     tokenPresent: !!token,
     urlPreview: url ? `${url.slice(0, 24)}…${url.slice(-6)}` : null,
+    vercelEnv: process.env.VERCEL_ENV || null,
+    allMatchingKeys: Object.keys(process.env).filter(
+      (k) => k.includes("KV") || k.includes("REDIS") || k.includes("UPSTASH")
+    ),
   };
 
   if (!url || !token) {
     result.verdict = "no-credentials";
-    result.next =
-      "Add Upstash Redis in Vercel → Storage → Marketplace → Upstash → Connect to Project. " +
-      "Then redeploy.";
     return NextResponse.json(result);
   }
 
