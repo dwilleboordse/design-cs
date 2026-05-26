@@ -86,10 +86,11 @@ If you want to refresh the seed from an updated Excel:
 
 ## Capacity logic
 
-- **Designer** capacity defaults to 8 tasks/day; covers both statics and videos
-- **Video editor** capacity defaults to 5 tasks/day; covers videos only
-- Tasks/day = total tasks / `workingDaysPerMonth` (default 22, configurable in Settings)
-- **Multi-assignee brands**: when 2+ designers (or editors) share a brand, the task count is divided equally between them. Example: 10 statics + 30 videos = 40 tasks ÷ 2 designers = 20 tasks credited to each. Cells with multiple people show a `÷N` indicator so you can spot it at a glance.
+- **Designer** capacity defaults to 8 tasks/day and counts **statics only** — the designer is responsible for static graphics, not videos
+- **Video editor** capacity defaults to 5 tasks/day and counts **videos only**
+- Tasks/day = relevant tasks / `workingDaysPerMonth` (default 22, configurable in Settings)
+- **Multi-assignee brands**: when 2+ designers (or editors) share a brand, the relevant task count is divided equally. Example: a brand with 10 statics shared between 2 designers = 5 statics credited to each. Cells with multiple people show a `÷N` indicator so you can spot it at a glance.
+- **Click any person row in the sidebar** to expand a breakdown table showing every brand contributing to their total, so you can audit the math.
 - Status colors:
   - `<40%` low (idle, gray)
   - `40–85%` ok (green)
