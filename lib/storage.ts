@@ -17,10 +17,18 @@ function migrate(state: any): AppState {
           b.editorIds = b.editorId ? [b.editorId] : [];
           delete b.editorId;
         }
+        if (typeof b.ugcEnabled !== "boolean") b.ugcEnabled = false;
+        if (!Array.isArray(b.ugcManagerIds)) b.ugcManagerIds = [];
       }
     }
   }
-  state.version = 2;
+  if (!Array.isArray(state.ugcManagers)) {
+    state.ugcManagers = [
+      { id: "ugc_trishe", name: "Trishe", maxClients: 8 },
+      { id: "ugc_lynore", name: "Lynore", maxClients: 8 },
+    ];
+  }
+  state.version = 3;
   return state as AppState;
 }
 

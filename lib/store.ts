@@ -1,7 +1,7 @@
 "use client";
 
 import { create } from "zustand";
-import type { AppState, Brand, Designer, Editor, Month, Strategist, StrategistGroup } from "./types";
+import type { AppState, Brand, Designer, Editor, Month, Strategist, StrategistGroup, UgcManager } from "./types";
 import { uid } from "./id";
 
 type Store = {
@@ -38,6 +38,12 @@ type Store = {
   addEditor: (name: string, dailyCapacity?: number) => Editor;
   updateEditor: (id: string, patch: Partial<Editor>) => void;
   removeEditor: (id: string) => void;
+  addUgcManager: (name: string, maxClients?: number) => UgcManager;
+  updateUgcManager: (id: string, patch: Partial<UgcManager>) => void;
+  removeUgcManager: (id: string) => void;
+  toggleBrandUgc: (monthId: string, brandId: string) => void;
+  toggleUgcManager: (monthId: string, brandId: string, managerId: string) => void;
+  addUgcManagerToBrand: (monthId: string, brandId: string, managerId: string) => void;
   setWorkingDays: (n: number) => void;
 };
 
@@ -184,7 +190,16 @@ export const useStore = create<Store>((set, get) => ({
     const next = deepClone(s);
     const g = next.months[monthId].groups.find((x) => x.id === groupId);
     if (!g) return;
-    g.brands.push({ id: uid("br"), name: "New brand", statics: 0, videos: 0, designerIds: [], editorIds: [] });
+    g.brands.push({
+      id: uid("br"),
+      name: "New brand",
+      statics: 0,
+      videos: 0,
+      designerIds: [],
+      editorIds: [],
+      ugcEnabled: false,
+      ugcManagerIds: [],
+    });
     set({ state: next });
     scheduleSave(get);
   },
@@ -380,6 +395,76 @@ export const useStore = create<Store>((set, get) => ({
       for (const g of m.groups)
         for (const b of g.brands) b.editorIds = b.editorIds.filter((x) => x !== id);
     }
+    set({ state: next });
+    scheduleSave(get);
+  },
+
+  addUgcManager(name, maxClients = 8) {
+    const s = get().state;
+    const item: UgcManager = { id: uid("ugc"), name, maxClients };
+    if (!s) return item;
+    const list = Array.isArray(s.ugcManagers) ? s.ugcManagers : [];
+    set({ state: { ...s, ugcManagers: [...list, item] } });
+    scheduleSave(get);
+    return item;
+  },
+  updateUgcManager(id, patch) {
+    const s = get().state;
+    if (!s) return;
+    const list = Array.isArray(s.ugcManagers) ? s.ugcManagers : [];
+    set({
+      state: { ...s, ugcManagers: list.map((x) => (x.id === id ? { ...x, ...patch } : x)) },
+    });
+    scheduleSave(get);
+  },
+  removeUgcManager(id) {
+    const s = get().state;
+    if (!s) return;
+    const next = deepClone(s);
+    next.ugcManagers = (next.ugcManagers || []).filter((x) => x.id !== id);
+    for (const m of Object.values(next.months)) {
+      for (const g of m.groups)
+        for (const b of g.brands)
+          b.ugcManagerIds = (b.ugcManagerIds || []).filter((x) => x !== id);
+    }
+    set({ state: next });
+    scheduleSave(get);
+  },
+
+  toggleBrandUgc(monthId, brandId) {
+    const s = get().state;
+    if (!s) return;
+    if (!findBrand(s, monthId, brandId)) return;
+    const next = deepClone(s);
+    const b = findBrand(next, monthId, brandId)!.brand;
+    b.ugcEnabled = !b.ugcEnabled;
+    if (!b.ugcEnabled) b.ugcManagerIds = [];
+    set({ state: next });
+    scheduleSave(get);
+  },
+
+  toggleUgcManager(monthId, brandId, managerId) {
+    const s = get().state;
+    if (!s) return;
+    if (!findBrand(s, monthId, brandId)) return;
+    const next = deepClone(s);
+    const b = findBrand(next, monthId, brandId)!.brand;
+    b.ugcEnabled = true;
+    const idx = b.ugcManagerIds.indexOf(managerId);
+    if (idx >= 0) b.ugcManagerIds.splice(idx, 1);
+    else b.ugcManagerIds.push(managerId);
+    set({ state: next });
+    scheduleSave(get);
+  },
+
+  addUgcManagerToBrand(monthId, brandId, managerId) {
+    const s = get().state;
+    if (!s) return;
+    if (!findBrand(s, monthId, brandId)) return;
+    const next = deepClone(s);
+    const b = findBrand(next, monthId, brandId)!.brand;
+    b.ugcEnabled = true;
+    if (!b.ugcManagerIds.includes(managerId)) b.ugcManagerIds.push(managerId);
     set({ state: next });
     scheduleSave(get);
   },

@@ -15,6 +15,12 @@ export type Editor = {
   dailyCapacity: number;
 };
 
+export type UgcManager = {
+  id: string;
+  name: string;
+  maxClients: number;
+};
+
 export type Brand = {
   id: string;
   name: string;
@@ -22,6 +28,8 @@ export type Brand = {
   videos: number;
   designerIds: string[];
   editorIds: string[];
+  ugcEnabled: boolean;
+  ugcManagerIds: string[];
   notes?: string;
 };
 
@@ -43,6 +51,7 @@ export type AppState = {
   strategists: Strategist[];
   designers: Designer[];
   editors: Editor[];
+  ugcManagers: UgcManager[];
   months: Record<string, Month>;
   currentMonthId: string;
 };

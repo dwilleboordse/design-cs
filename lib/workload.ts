@@ -146,6 +146,54 @@ function roundUI(n: number): number {
   return Math.round(n * 10) / 10;
 }
 
+export type UgcWorkload = {
+  managerId: string;
+  name: string;
+  brandCount: number;
+  maxClients: number;
+  utilization: number;
+  status: "low" | "ok" | "warn" | "over";
+  brands: { brandId: string; brandName: string; strategistName: string; coAssigneeCount: number }[];
+};
+
+export function computeUgcWorkload(state: AppState, month: Month): UgcWorkload[] {
+  const managers = state.ugcManagers || [];
+  const buckets = new Map<string, UgcWorkload["brands"]>();
+  for (const u of managers) buckets.set(u.id, []);
+
+  for (const g of month.groups) {
+    const sName = strategistName(state, g.strategistId);
+    for (const b of g.brands) {
+      if (!b.ugcEnabled) continue;
+      const ids = b.ugcManagerIds || [];
+      for (const mid of ids) {
+        const list = buckets.get(mid);
+        if (!list) continue;
+        list.push({
+          brandId: b.id,
+          brandName: b.name,
+          strategistName: sName,
+          coAssigneeCount: ids.length,
+        });
+      }
+    }
+  }
+
+  return managers.map((u) => {
+    const list = buckets.get(u.id) || [];
+    const util = u.maxClients > 0 ? list.length / u.maxClients : 0;
+    return {
+      managerId: u.id,
+      name: u.name,
+      brandCount: list.length,
+      maxClients: u.maxClients,
+      utilization: util,
+      status: statusFor(util),
+      brands: list.sort((a, b) => a.brandName.localeCompare(b.brandName)),
+    };
+  });
+}
+
 export function strategistTotals(month: Month) {
   return month.groups.map((g) => {
     let stat = 0,
