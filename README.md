@@ -4,10 +4,11 @@ A workload-and-allocation planner for designers, video editors, and creative str
 
 ## Features
 
-- **Allocation board** — rows grouped by Creative Strategist, with editable Brand / Statics / Videos / Designer / Editor cells
-- **Multiple people per brand** — assign as many designers and editors to the same brand as you need; click the `+` chip in a cell to add more, click `×` on a chip to remove
-- **Workload sidebar** — per-person totals, tasks/day, utilization bar with green / yellow / red status
-- **Drag and drop** — drag a designer or editor onto a brand row to *add* them (existing assignees stay); drag a brand by its grip handle to a different strategist
+- **Allocation board** — rows grouped by Creative Strategist, with editable Brand / Statics / Videos / Designer / Editor / UGC cells
+- **Multiple people per brand** — assign as many designers, editors, or UGC managers to the same brand as you need; click the `+` chip in a cell to add more, click `×` on a chip to remove
+- **UGC toggle** — each brand has a "UGC off" pill; click it to enable UGC for that brand, then assign one or more UGC managers (Trishe and Lynore seeded by default). Disabling UGC clears the assignees.
+- **Workload sidebar** — designer/editor totals (tasks/day, utilization), plus UGC managers showing brand count vs. max clients
+- **Drag and drop** — drag a designer, editor, or UGC manager onto a brand row to *add* them (existing assignees stay); drag a brand by its grip handle to a different strategist
 - **Month navigation** — pick any month; clone the current month into the next with one click
 - **Roster management** — add / rename / remove strategists, designers, editors and tweak per-person daily capacity
 - **Insights bar** — shows overloaded people, near-capacity warnings, idle people, and unassigned brands
