@@ -9,6 +9,7 @@ A workload-and-allocation planner for designers, video editors, and creative str
 - **UGC toggle** — each brand has a "UGC off" pill; click it to enable UGC for that brand, then assign one or more UGC managers (Trishe and Lynore seeded by default). Disabling UGC clears the assignees.
 - **Workload sidebar** — designer/editor totals (tasks/day, utilization), plus UGC managers showing brand count vs. max clients
 - **Drag and drop** — drag a designer, editor, or UGC manager onto a brand row to *add* them (existing assignees stay); drag a brand by its grip handle to a different strategist
+- **Shareable Overview** — a read-only `/overview` route shows only clients and team-member assignments (no ad counts), grouped by Creative Strategist in a 2-column layout. Designed for a single screenshot to share in Slack. Reached via the **Overview** button in the editor header.
 - **Month navigation** — pick any month; clone the current month into the next with one click
 - **Roster management** — add / rename / remove strategists, designers, editors and tweak per-person daily capacity
 - **Insights bar** — shows overloaded people, near-capacity warnings, idle people, and unassigned brands
