@@ -1,10 +1,10 @@
 "use client";
 
 import { useStore } from "@/lib/store";
-import { computeDesignerWorkload, computeEditorWorkload } from "@/lib/workload";
+import { computeDesignerWorkload, computeEditorWorkload, computeUgcWorkload } from "@/lib/workload";
 import { useDraggable } from "@dnd-kit/core";
-import type { Workload } from "@/lib/workload";
-import { GripVertical, ChevronDown, ChevronRight } from "lucide-react";
+import type { UgcWorkload, Workload } from "@/lib/workload";
+import { GripVertical, ChevronDown, ChevronRight, Sparkles } from "lucide-react";
 import { useState } from "react";
 
 export function WorkloadSidebar() {
@@ -14,6 +14,7 @@ export function WorkloadSidebar() {
   if (!month) return null;
   const designers = computeDesignerWorkload(state, month).sort((a, b) => b.utilization - a.utilization);
   const editors = computeEditorWorkload(state, month).sort((a, b) => b.utilization - a.utilization);
+  const ugc = computeUgcWorkload(state, month).sort((a, b) => b.utilization - a.utilization);
 
   return (
     <div className="p-5 flex flex-col gap-6">
@@ -38,6 +39,114 @@ export function WorkloadSidebar() {
         ))}
         {editors.length === 0 && <Empty kind="editor" />}
       </Section>
+
+      <Section
+        title="UGC managers"
+        subtitle="brands managed"
+        helper="Drag onto a brand row, or use the UGC chip on each row. Click a row to see brands."
+      >
+        {ugc.map((w) => (
+          <UgcCard key={w.managerId} w={w} />
+        ))}
+        {ugc.length === 0 && (
+          <div className="text-xs text-muted italic px-3 py-2 border border-dashed border-border rounded-md">
+            No UGC managers yet — add some in Settings.
+          </div>
+        )}
+      </Section>
+    </div>
+  );
+}
+
+function UgcCard({ w }: { w: UgcWorkload }) {
+  const [open, setOpen] = useState(false);
+  const draggable = useDraggable({
+    id: `person:ugc:${w.managerId}`,
+    data: { kind: "ugc", managerId: w.managerId },
+  });
+
+  const colors: Record<UgcWorkload["status"], string> = {
+    low: "bg-muted/30",
+    ok: "bg-success",
+    warn: "bg-warning",
+    over: "bg-danger",
+  };
+  const textColors: Record<UgcWorkload["status"], string> = {
+    low: "text-muted",
+    ok: "text-success",
+    warn: "text-warning",
+    over: "text-danger",
+  };
+
+  const pct = Math.min(1.5, w.utilization);
+
+  return (
+    <div
+      ref={draggable.setNodeRef}
+      style={draggable.transform ? { opacity: 0.5 } : undefined}
+      className="bg-panel border border-border rounded-md"
+    >
+      <div className="p-3">
+        <div className="flex items-center gap-2 mb-1.5">
+          <button
+            {...draggable.listeners}
+            {...draggable.attributes}
+            className="text-muted/40 hover:text-muted cursor-grab active:cursor-grabbing"
+            title="Drag to assign"
+          >
+            <GripVertical size={14} />
+          </button>
+          <Sparkles size={13} className="text-fuchsia-400" />
+          <button
+            onClick={() => setOpen((v) => !v)}
+            className="flex-1 text-left font-medium text-sm flex items-center gap-1.5 hover:text-fuchsia-300"
+          >
+            {open ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
+            {w.name}
+          </button>
+          <div className={`text-xs font-semibold tabular-nums ${textColors[w.status]}`}>
+            {w.brandCount}/{w.maxClients}
+          </div>
+        </div>
+        <div className="h-1.5 bg-panel2 rounded-full overflow-hidden mb-2 relative">
+          <div
+            className={`h-full ${colors[w.status]} transition-all`}
+            style={{ width: `${Math.min(100, (pct * 100) / 1.5)}%` }}
+          />
+          <div
+            className="absolute top-0 bottom-0 w-px bg-text/40"
+            style={{ left: `${(1 / 1.5) * 100}%` }}
+          />
+        </div>
+        <div className="flex items-center gap-3 text-[11px] text-muted tabular-nums">
+          <span>
+            {w.brandCount} brand{w.brandCount === 1 ? "" : "s"}
+          </span>
+          <span>·</span>
+          <span>cap {w.maxClients}</span>
+          <span>·</span>
+          <span>{Math.round(w.utilization * 100)}%</span>
+        </div>
+      </div>
+      {open && (
+        <div className="border-t border-border bg-panel2/40 px-3 py-2">
+          {w.brands.length === 0 ? (
+            <div className="text-xs text-muted italic py-1">No brands assigned yet.</div>
+          ) : (
+            <ul className="text-[11px] divide-y divide-border/60">
+              {w.brands.map((b) => (
+                <li key={b.brandId} className="py-1 flex items-center gap-2">
+                  <span className="text-muted shrink-0">{b.strategistName}</span>
+                  <span className="flex-1 truncate">{b.brandName}</span>
+                  {b.coAssigneeCount > 1 && (
+                    <span className="text-muted text-[10px]">co-managed ×{b.coAssigneeCount}</span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      )}
     </div>
   );
 }

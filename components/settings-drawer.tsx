@@ -1,7 +1,7 @@
 "use client";
 
 import { useStore } from "@/lib/store";
-import { Plus, Trash2, X, RotateCcw } from "lucide-react";
+import { Plus, Trash2, X, RotateCcw, Sparkles } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export function SettingsDrawer({ open, onClose }: { open: boolean; onClose: () => void }) {
@@ -29,6 +29,7 @@ export function SettingsDrawer({ open, onClose }: { open: boolean; onClose: () =
         <StrategistsList />
         <DesignersList />
         <EditorsList />
+        <UgcManagersList />
         <DangerZone />
       </div>
     </div>
@@ -252,6 +253,86 @@ function EditorsList() {
           className="w-16 text-sm bg-panel2 border border-border rounded-md px-2 py-1.5 text-right"
           value={newCap}
           onChange={(e) => setNewCap(Number(e.target.value) || 5)}
+        />
+        <button
+          disabled={!newName.trim()}
+          onClick={() => {
+            add(newName.trim(), newCap);
+            setNewName("");
+          }}
+          className="px-3 text-sm rounded-md bg-accent/15 border border-accent/40 text-accent hover:bg-accent/25 inline-flex items-center gap-1.5"
+        >
+          <Plus size={14} /> Add
+        </button>
+      </div>
+    </section>
+  );
+}
+
+function UgcManagersList() {
+  const state = useStore((s) => s.state);
+  const add = useStore((s) => s.addUgcManager);
+  const update = useStore((s) => s.updateUgcManager);
+  const remove = useStore((s) => s.removeUgcManager);
+  const [newName, setNewName] = useState("");
+  const [newCap, setNewCap] = useState(8);
+  if (!state) return null;
+  const managers = state.ugcManagers || [];
+  return (
+    <section>
+      <h3 className="text-sm font-semibold mb-2 flex items-center gap-1.5">
+        <Sparkles size={13} className="text-fuchsia-400" /> UGC managers ({managers.length})
+      </h3>
+      <div className="flex flex-col gap-1.5">
+        {managers.map((u) => (
+          <div key={u.id} className="flex items-center gap-2 bg-panel2 rounded-md p-2 border border-border">
+            <input
+              className="flex-1 text-sm border border-transparent rounded px-2 py-1 hover:border-border focus:border-accent"
+              value={u.name}
+              onChange={(e) => update(u.id, { name: e.target.value })}
+            />
+            <label className="text-xs text-muted flex items-center gap-1">
+              max clients
+              <input
+                type="number"
+                min={1}
+                max={50}
+                className="w-12 text-right border border-border rounded px-1.5 py-1 bg-panel"
+                value={u.maxClients}
+                onChange={(e) => update(u.id, { maxClients: Math.max(1, Number(e.target.value) || 1) })}
+              />
+            </label>
+            <button
+              onClick={() => {
+                if (confirm(`Remove "${u.name}"? Their assignments will be cleared.`)) remove(u.id);
+              }}
+              className="p-1.5 text-muted hover:text-danger rounded"
+            >
+              <Trash2 size={14} />
+            </button>
+          </div>
+        ))}
+      </div>
+      <div className="flex gap-2 mt-2">
+        <input
+          className="flex-1 text-sm bg-panel2 border border-border rounded-md px-2 py-1.5"
+          placeholder="New UGC manager name"
+          value={newName}
+          onChange={(e) => setNewName(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && newName.trim()) {
+              add(newName.trim(), newCap);
+              setNewName("");
+            }
+          }}
+        />
+        <input
+          type="number"
+          min={1}
+          max={50}
+          className="w-16 text-sm bg-panel2 border border-border rounded-md px-2 py-1.5 text-right"
+          value={newCap}
+          onChange={(e) => setNewCap(Number(e.target.value) || 8)}
         />
         <button
           disabled={!newName.trim()}

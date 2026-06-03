@@ -64,12 +64,13 @@ export function StrategistGroupCard({ monthId, group }: { monthId: string; group
       </div>
 
       <div className="divide-y divide-border">
-        <div className="grid grid-cols-[1fr_80px_80px_140px_140px_44px] gap-2 px-4 py-2 text-[11px] uppercase tracking-wider text-muted bg-panel/40">
+        <div className="grid grid-cols-[1fr_70px_70px_minmax(160px,1.2fr)_minmax(160px,1.2fr)_minmax(150px,1fr)_44px] gap-2 px-4 py-2 text-[11px] uppercase tracking-wider text-muted bg-panel/40">
           <div>Brand</div>
           <div className="text-right">Statics</div>
           <div className="text-right">Videos</div>
           <div>Designer</div>
           <div>Video editor</div>
+          <div>UGC</div>
           <div></div>
         </div>
         {group.brands.map((b) => (

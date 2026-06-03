@@ -3,7 +3,7 @@
 import { useStore } from "@/lib/store";
 import type { Brand } from "@/lib/types";
 import { useDraggable, useDroppable } from "@dnd-kit/core";
-import { Trash2, GripVertical, X, Plus } from "lucide-react";
+import { Trash2, GripVertical, X, Plus, Sparkles } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 export function BrandRow({ monthId, groupId, brand }: { monthId: string; groupId: string; brand: Brand }) {
@@ -24,6 +24,10 @@ export function BrandRow({ monthId, groupId, brand }: { monthId: string; groupId
     id: `brand-e:${brand.id}`,
     data: { kind: "brand-editor-slot", monthId, brandId: brand.id },
   });
+  const ugcDrop = useDroppable({
+    id: `brand-u:${brand.id}`,
+    data: { kind: "brand-ugc-slot", monthId, brandId: brand.id },
+  });
 
   if (!state) return null;
 
@@ -31,7 +35,7 @@ export function BrandRow({ monthId, groupId, brand }: { monthId: string; groupId
     <div
       ref={draggable.setNodeRef}
       style={draggable.transform ? { opacity: 0.4 } : undefined}
-      className="grid grid-cols-[1fr_80px_80px_minmax(180px,1.4fr)_minmax(180px,1.4fr)_44px] gap-2 items-start px-4 py-2 row-hover"
+      className="grid grid-cols-[1fr_70px_70px_minmax(160px,1.2fr)_minmax(160px,1.2fr)_minmax(150px,1fr)_44px] gap-2 items-start px-4 py-2 row-hover"
     >
       <div className="flex items-center gap-1.5 min-w-0 pt-1">
         <button
@@ -82,6 +86,18 @@ export function BrandRow({ monthId, groupId, brand }: { monthId: string; groupId
           brandId={brand.id}
           assignedIds={brand.editorIds}
           options={state.editors.map((e) => ({ id: e.id, name: e.name }))}
+        />
+      </div>
+      <div
+        ref={ugcDrop.setNodeRef}
+        className={`rounded-md ${ugcDrop.isOver ? "drop-target-active" : ""}`}
+      >
+        <UgcCell
+          monthId={monthId}
+          brandId={brand.id}
+          enabled={brand.ugcEnabled}
+          assignedIds={brand.ugcManagerIds}
+          options={(state.ugcManagers || []).map((u) => ({ id: u.id, name: u.name }))}
         />
       </div>
       <button
@@ -167,6 +183,68 @@ function PeopleCell({
   );
 }
 
+function UgcCell({
+  monthId,
+  brandId,
+  enabled,
+  assignedIds,
+  options,
+}: {
+  monthId: string;
+  brandId: string;
+  enabled: boolean;
+  assignedIds: string[];
+  options: { id: string; name: string }[];
+}) {
+  const toggleBrandUgc = useStore((s) => s.toggleBrandUgc);
+  const toggleUgcManager = useStore((s) => s.toggleUgcManager);
+  const nameById = new Map(options.map((o) => [o.id, o.name]));
+
+  if (!enabled && assignedIds.length === 0) {
+    return (
+      <div className="flex items-center min-h-[28px] py-0.5">
+        <button
+          onClick={() => toggleBrandUgc(monthId, brandId)}
+          className="chip border-dashed text-muted hover:text-fuchsia-400 hover:border-fuchsia-400"
+          title="Enable UGC for this brand"
+        >
+          <Sparkles size={11} /> UGC off
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex flex-wrap items-center gap-1 min-h-[28px] py-0.5">
+      <button
+        onClick={() => toggleBrandUgc(monthId, brandId)}
+        className="chip bg-fuchsia-500/15 border-fuchsia-500/40 text-fuchsia-300 hover:bg-fuchsia-500/25"
+        title="UGC active — click to turn off"
+      >
+        <Sparkles size={11} /> UGC
+      </button>
+      {assignedIds.map((id) => (
+        <span key={id} className="chip bg-fuchsia-500/10 border-fuchsia-500/40 text-fuchsia-300">
+          <span>{nameById.get(id) || "?"}</span>
+          <button
+            onClick={() => toggleUgcManager(monthId, brandId, id)}
+            className="opacity-60 hover:opacity-100"
+            title="Remove"
+          >
+            <X size={11} />
+          </button>
+        </span>
+      ))}
+      <AddPersonMenu
+        options={options.filter((o) => !assignedIds.includes(o.id))}
+        onPick={(id) => toggleUgcManager(monthId, brandId, id)}
+        empty={assignedIds.length === 0}
+        kind="UGC manager"
+      />
+    </div>
+  );
+}
+
 function AddPersonMenu({
   options,
   onPick,
@@ -176,7 +254,7 @@ function AddPersonMenu({
   options: { id: string; name: string }[];
   onPick: (id: string) => void;
   empty: boolean;
-  kind: "designer" | "editor";
+  kind: string;
 }) {
   const [open, setOpen] = useState(false);
   const [filter, setFilter] = useState("");
