@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "workingDaysPerMonth": 22,
   "strategists": [
     {
@@ -143,7 +143,9 @@
               ],
               "editorIds": [
                 "e_020d7ef5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_c32c7dcd8d",
@@ -155,7 +157,9 @@
               ],
               "editorIds": [
                 "e_020d7ef5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_c53cc85715",
@@ -165,7 +169,9 @@
               "designerIds": [
                 "d_62bfa240"
               ],
-              "editorIds": []
+              "editorIds": [],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -181,7 +187,9 @@
               "designerIds": [
                 "d_fa41630e"
               ],
-              "editorIds": []
+              "editorIds": [],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_75af7bc219",
@@ -193,7 +201,9 @@
               ],
               "editorIds": [
                 "e_c4ecfab5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_c019ced82c",
@@ -205,7 +215,9 @@
               ],
               "editorIds": [
                 "e_020d7ef5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_63ebc2bfab",
@@ -217,7 +229,9 @@
               ],
               "editorIds": [
                 "e_81c0e03e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_852e0691f4",
@@ -229,7 +243,9 @@
               ],
               "editorIds": [
                 "e_c4ecfab5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_8e3a6bba6c",
@@ -241,7 +257,9 @@
               ],
               "editorIds": [
                 "e_c4ecfab5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -259,7 +277,9 @@
               ],
               "editorIds": [
                 "e_81c0e03e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_29e12e5165",
@@ -271,7 +291,9 @@
               ],
               "editorIds": [
                 "e_81c0e03e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_ca70a5c26a",
@@ -283,7 +305,9 @@
               ],
               "editorIds": [
                 "e_81c0e03e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -301,7 +325,9 @@
               ],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_8f6b976cc2",
@@ -311,7 +337,9 @@
               "designerIds": [],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_04e2a85bb0",
@@ -323,7 +351,9 @@
               ],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_7295756ccc",
@@ -335,7 +365,9 @@
               ],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_57adf56ffa",
@@ -347,7 +379,9 @@
               ],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -365,7 +399,9 @@
               ],
               "editorIds": [
                 "e_4da41d16"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_ab77a7f81b",
@@ -377,7 +413,9 @@
               ],
               "editorIds": [
                 "e_4da41d16"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_a3ef835701",
@@ -389,7 +427,9 @@
               ],
               "editorIds": [
                 "e_4da41d16"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -407,7 +447,9 @@
               ],
               "editorIds": [
                 "e_4da41d16"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_bfe32deac5",
@@ -419,7 +461,9 @@
               ],
               "editorIds": [
                 "e_4da41d16"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_afee712a1d",
@@ -429,7 +473,9 @@
               "designerIds": [
                 "d_61826609"
               ],
-              "editorIds": []
+              "editorIds": [],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_67aabe5f2a",
@@ -441,7 +487,9 @@
               ],
               "editorIds": [
                 "e_4da41d16"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -459,7 +507,9 @@
               ],
               "editorIds": [
                 "e_e7b3c5f8"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_50898a9fe6",
@@ -471,7 +521,9 @@
               ],
               "editorIds": [
                 "e_e7b3c5f8"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_3f59072346",
@@ -483,7 +535,9 @@
               ],
               "editorIds": [
                 "e_e7b3c5f8"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         }
@@ -507,7 +561,9 @@
               ],
               "editorIds": [
                 "e_020d7ef5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_bdd17c2c7f",
@@ -519,7 +575,9 @@
               ],
               "editorIds": [
                 "e_e7b3c5f8"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_5bbe31da80",
@@ -531,7 +589,9 @@
               ],
               "editorIds": [
                 "e_020d7ef5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_7412a02791",
@@ -541,7 +601,9 @@
               "designerIds": [
                 "d_62bfa240"
               ],
-              "editorIds": []
+              "editorIds": [],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -557,7 +619,9 @@
               "designerIds": [
                 "d_fa41630e"
               ],
-              "editorIds": []
+              "editorIds": [],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_3a2582bcab",
@@ -569,7 +633,9 @@
               ],
               "editorIds": [
                 "e_c4ecfab5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_f7ce4a6d32",
@@ -581,7 +647,9 @@
               ],
               "editorIds": [
                 "e_020d7ef5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_9bc1199ebc",
@@ -593,7 +661,9 @@
               ],
               "editorIds": [
                 "e_81c0e03e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -611,7 +681,9 @@
               ],
               "editorIds": [
                 "e_81c0e03e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_e8956c4a88",
@@ -623,7 +695,9 @@
               ],
               "editorIds": [
                 "e_81c0e03e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_461820256d",
@@ -635,7 +709,9 @@
               ],
               "editorIds": [
                 "e_81c0e03e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_fbb3fc099b",
@@ -647,7 +723,9 @@
               ],
               "editorIds": [
                 "e_81c0e03e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -663,7 +741,9 @@
               "designerIds": [
                 "d_64b3a105"
               ],
-              "editorIds": []
+              "editorIds": [],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_016e741fc0",
@@ -673,7 +753,9 @@
               "designerIds": [],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_2618b87fc4",
@@ -685,7 +767,9 @@
               ],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_085530dae0",
@@ -697,7 +781,9 @@
               ],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_39b603c69b",
@@ -709,7 +795,9 @@
               ],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -727,7 +815,9 @@
               ],
               "editorIds": [
                 "e_4da41d16"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_336c45bfe5",
@@ -739,7 +829,9 @@
               ],
               "editorIds": [
                 "e_4da41d16"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_020c9fab44",
@@ -749,7 +841,9 @@
               "designerIds": [
                 "d_61826609"
               ],
-              "editorIds": []
+              "editorIds": [],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_b4e8cae886",
@@ -761,7 +855,9 @@
               ],
               "editorIds": [
                 "e_4da41d16"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -779,7 +875,9 @@
               ],
               "editorIds": [
                 "e_e7b3c5f8"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_3abc4a27ed",
@@ -791,7 +889,9 @@
               ],
               "editorIds": [
                 "e_e7b3c5f8"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_76cd029459",
@@ -803,7 +903,9 @@
               ],
               "editorIds": [
                 "e_e7b3c5f8"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -819,7 +921,9 @@
               "designerIds": [],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_7a9564ed1f",
@@ -831,7 +935,9 @@
               ],
               "editorIds": [
                 "e_020d7ef5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_0a11ec42ea",
@@ -843,7 +949,9 @@
               ],
               "editorIds": [
                 "e_4da41d16"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_412f021ef4",
@@ -855,7 +963,9 @@
               ],
               "editorIds": [
                 "e_4da41d16"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -873,7 +983,9 @@
               ],
               "editorIds": [
                 "e_020d7ef5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         }
@@ -897,7 +1009,9 @@
               ],
               "editorIds": [
                 "e_e7b3c5f8"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_0862bca258",
@@ -905,7 +1019,9 @@
               "statics": 0,
               "videos": 0,
               "designerIds": [],
-              "editorIds": []
+              "editorIds": [],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_41562859c5",
@@ -913,7 +1029,9 @@
               "statics": 0,
               "videos": 0,
               "designerIds": [],
-              "editorIds": []
+              "editorIds": [],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_d226d8027c",
@@ -921,7 +1039,9 @@
               "statics": 0,
               "videos": 0,
               "designerIds": [],
-              "editorIds": []
+              "editorIds": [],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_b80b4ae803",
@@ -932,7 +1052,9 @@
               "editorIds": [
                 "e_2ee0d530",
                 "e_e7b3c5f8"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_4d84d82805",
@@ -944,7 +1066,9 @@
               ],
               "editorIds": [
                 "e_020d7ef5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -962,7 +1086,9 @@
               ],
               "editorIds": [
                 "e_81c0e03e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_67e3dbf46d",
@@ -974,7 +1100,9 @@
               ],
               "editorIds": [
                 "e_81c0e03e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -990,7 +1118,9 @@
               "designerIds": [
                 "d_64b3a105"
               ],
-              "editorIds": []
+              "editorIds": [],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_a0976a21e7",
@@ -1000,7 +1130,9 @@
               "designerIds": [],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_f229b1cde9",
@@ -1012,7 +1144,9 @@
               ],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -1030,7 +1164,9 @@
               ],
               "editorIds": [
                 "e_020d7ef5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -1048,7 +1184,9 @@
               ],
               "editorIds": [
                 "e_4da41d16"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_18c51a817b",
@@ -1058,7 +1196,9 @@
               "designerIds": [],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_36917629b8",
@@ -1070,7 +1210,9 @@
               ],
               "editorIds": [
                 "e_838511d2"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_0c926f1545",
@@ -1080,7 +1222,9 @@
               "designerIds": [
                 "d_61826609"
               ],
-              "editorIds": []
+              "editorIds": [],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_5bcb11472f",
@@ -1092,7 +1236,9 @@
               ],
               "editorIds": [
                 "e_4da41d16"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -1110,7 +1256,9 @@
               ],
               "editorIds": [
                 "e_9338245e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_e27ae3d412",
@@ -1122,7 +1270,9 @@
               ],
               "editorIds": [
                 "e_81c0e03e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_f68c8249b7",
@@ -1132,7 +1282,9 @@
               "designerIds": [
                 "d_0f8332de"
               ],
-              "editorIds": []
+              "editorIds": [],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -1148,7 +1300,9 @@
               "designerIds": [],
               "editorIds": [
                 "e_020d7ef5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_14d054c3f4",
@@ -1160,7 +1314,9 @@
               ],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_78b7a7378f",
@@ -1172,7 +1328,9 @@
               ],
               "editorIds": [
                 "e_81c0e03e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_1b1876c787",
@@ -1184,7 +1342,9 @@
               ],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -1202,7 +1362,9 @@
               ],
               "editorIds": [
                 "e_020d7ef5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_55f7175a24",
@@ -1214,7 +1376,9 @@
               ],
               "editorIds": [
                 "e_81c0e03e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_2aeb14b2ac",
@@ -1224,7 +1388,9 @@
               "designerIds": [
                 "d_fa41630e"
               ],
-              "editorIds": []
+              "editorIds": [],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -1240,7 +1406,9 @@
               "designerIds": [],
               "editorIds": [
                 "e_9338245e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_f8e3253531",
@@ -1252,7 +1420,9 @@
               ],
               "editorIds": [
                 "e_9338245e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_5d7bd1c450",
@@ -1264,7 +1434,9 @@
               ],
               "editorIds": [
                 "e_020d7ef5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         }
@@ -1288,7 +1460,9 @@
               ],
               "editorIds": [
                 "e_e7b3c5f8"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_520953d1a7",
@@ -1296,7 +1470,9 @@
               "statics": 0,
               "videos": 0,
               "designerIds": [],
-              "editorIds": []
+              "editorIds": [],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_4a3ed2bf7b",
@@ -1308,7 +1484,9 @@
               ],
               "editorIds": [
                 "e_e7b3c5f8"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_75eff55073",
@@ -1318,7 +1496,9 @@
               "designerIds": [
                 "d_0f8332de"
               ],
-              "editorIds": []
+              "editorIds": [],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_37ce4ccc99",
@@ -1330,7 +1510,9 @@
               ],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -1346,7 +1528,9 @@
               "designerIds": [
                 "d_64b3a105"
               ],
-              "editorIds": []
+              "editorIds": [],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_c3d8ee9a61",
@@ -1356,7 +1540,9 @@
               "designerIds": [],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_5e38a79b49",
@@ -1366,7 +1552,9 @@
               "designerIds": [],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_98019770b5",
@@ -1378,7 +1566,9 @@
               ],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_212f5fb406",
@@ -1390,7 +1580,9 @@
               ],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_82fe00a1c1",
@@ -1402,7 +1594,9 @@
               ],
               "editorIds": [
                 "e_2ee0d530"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -1420,7 +1614,9 @@
               ],
               "editorIds": [
                 "e_020d7ef5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -1438,7 +1634,9 @@
               ],
               "editorIds": [
                 "e_4da41d16"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_0957a2497e",
@@ -1450,7 +1648,9 @@
               ],
               "editorIds": [
                 "e_4da41d16"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_cf62854406",
@@ -1462,7 +1662,9 @@
               ],
               "editorIds": [
                 "e_838511d2"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_67a19bedb0",
@@ -1472,7 +1674,9 @@
               "designerIds": [],
               "editorIds": [
                 "e_838511d2"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -1490,7 +1694,9 @@
               ],
               "editorIds": [
                 "e_020d7ef5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_29cb2fb470",
@@ -1502,7 +1708,9 @@
               ],
               "editorIds": [
                 "e_020d7ef5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_c18aabb2c5",
@@ -1512,7 +1720,9 @@
               "designerIds": [],
               "editorIds": [
                 "e_020d7ef5"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_b87aaa6a86",
@@ -1522,7 +1732,9 @@
               "designerIds": [
                 "d_fa41630e"
               ],
-              "editorIds": []
+              "editorIds": [],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         },
@@ -1538,7 +1750,9 @@
               "designerIds": [],
               "editorIds": [
                 "e_9338245e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_3ea5f502d2",
@@ -1550,7 +1764,9 @@
               ],
               "editorIds": [
                 "e_9338245e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_a048f36d34",
@@ -1558,7 +1774,9 @@
               "statics": 0,
               "videos": 0,
               "designerIds": [],
-              "editorIds": []
+              "editorIds": [],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_78e459b77a",
@@ -1570,7 +1788,9 @@
               ],
               "editorIds": [
                 "e_e7b3c5f8"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_9505031c61",
@@ -1582,7 +1802,9 @@
               ],
               "editorIds": [
                 "e_81c0e03e"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             },
             {
               "id": "br_9a917a594d",
@@ -1594,12 +1816,26 @@
               ],
               "editorIds": [
                 "e_838511d2"
-              ]
+              ],
+              "ugcEnabled": false,
+              "ugcManagerIds": []
             }
           ]
         }
       ]
     }
   },
-  "currentMonthId": "2026-05"
+  "currentMonthId": "2026-05",
+  "ugcManagers": [
+    {
+      "id": "ugc_trishe",
+      "name": "Trishe",
+      "maxClients": 8
+    },
+    {
+      "id": "ugc_lynore",
+      "name": "Lynore",
+      "maxClients": 8
+    }
+  ]
 }
