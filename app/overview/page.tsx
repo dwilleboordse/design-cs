@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useStore } from "@/lib/store";
 import { MonthPicker } from "@/components/month-picker";
 import { OverviewView } from "@/components/overview-view";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, BarChart3 } from "lucide-react";
 
 export default function OverviewPage() {
   const load = useStore((s) => s.load);
@@ -45,6 +45,12 @@ export default function OverviewPage() {
             <p className="text-xs text-muted">Read-only view — share this URL for screenshots</p>
           </div>
           <div className="flex-1" />
+          <Link
+            href="/analytics"
+            className="px-3 py-1.5 text-sm rounded-md border border-border hover:bg-panel2 inline-flex items-center gap-1.5"
+          >
+            <BarChart3 size={14} /> Analytics
+          </Link>
           <MonthPicker value={monthId} onChange={setLocalMonth} />
         </div>
       </header>
