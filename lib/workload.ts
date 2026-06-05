@@ -194,6 +194,81 @@ export function computeUgcWorkload(state: AppState, month: Month): UgcWorkload[]
   });
 }
 
+export type RoleKind = "designer" | "editor" | "ugc";
+
+export type PersonMonthly = {
+  personId: string;
+  name: string;
+  role: RoleKind;
+  capacity: number; // dailyCapacity for d/e, maxClients for ugc
+  perMonth: Record<
+    string,
+    {
+      tasks: number; // statics for designer, videos for editor, brand count for ugc
+      perDay: number; // 0 for ugc
+      utilization: number;
+      status: "low" | "ok" | "warn" | "over";
+    }
+  >;
+};
+
+export function computeAllMonthlyWorkloads(state: AppState): {
+  monthsSorted: { id: string; label: string }[];
+  designers: PersonMonthly[];
+  editors: PersonMonthly[];
+  ugc: PersonMonthly[];
+} {
+  const monthsSorted = Object.values(state.months)
+    .map((m) => ({ id: m.id, label: m.label }))
+    .sort((a, b) => a.id.localeCompare(b.id));
+
+  const mk = <T extends { id: string; name: string }>(items: T[], role: RoleKind, capOf: (t: T) => number): PersonMonthly[] =>
+    items.map((p) => ({
+      personId: p.id,
+      name: p.name,
+      role,
+      capacity: capOf(p),
+      perMonth: {},
+    }));
+
+  const designers = mk(state.designers, "designer", (d) => d.dailyCapacity);
+  const editors = mk(state.editors, "editor", (e) => e.dailyCapacity);
+  const ugc = mk(state.ugcManagers || [], "ugc", (u) => u.maxClients);
+
+  for (const { id: mid } of monthsSorted) {
+    const month = state.months[mid];
+    for (const w of computeDesignerWorkload(state, month)) {
+      const p = designers.find((x) => x.personId === w.personId)!;
+      p.perMonth[mid] = {
+        tasks: w.totalTasks,
+        perDay: w.perDay,
+        utilization: w.utilization,
+        status: w.status,
+      };
+    }
+    for (const w of computeEditorWorkload(state, month)) {
+      const p = editors.find((x) => x.personId === w.personId)!;
+      p.perMonth[mid] = {
+        tasks: w.totalTasks,
+        perDay: w.perDay,
+        utilization: w.utilization,
+        status: w.status,
+      };
+    }
+    for (const w of computeUgcWorkload(state, month)) {
+      const p = ugc.find((x) => x.personId === w.managerId)!;
+      p.perMonth[mid] = {
+        tasks: w.brandCount,
+        perDay: 0,
+        utilization: w.utilization,
+        status: w.status,
+      };
+    }
+  }
+
+  return { monthsSorted, designers, editors, ugc };
+}
+
 export function strategistTotals(month: Month) {
   return month.groups.map((g) => {
     let stat = 0,
