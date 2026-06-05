@@ -1,7 +1,7 @@
 "use client";
 
 import { useStore } from "@/lib/store";
-import { Settings, Copy, Download, Upload, Share2 } from "lucide-react";
+import { Settings, Copy, Download, Upload, Share2, BarChart3 } from "lucide-react";
 import Link from "next/link";
 import { MonthPicker } from "./month-picker";
 
@@ -72,6 +72,13 @@ export function Header({ onOpenSettings }: { onOpenSettings: () => void }) {
         </div>
         <div className="flex-1" />
         <MonthPicker />
+        <Link
+          href="/analytics"
+          className="px-3 py-1.5 text-sm rounded-md border border-border hover:bg-panel2 inline-flex items-center gap-1.5"
+          title="Team workload analytics across months"
+        >
+          <BarChart3 size={14} /> Analytics
+        </Link>
         <Link
           href="/overview"
           className="px-3 py-1.5 text-sm rounded-md border border-border hover:bg-panel2 inline-flex items-center gap-1.5"
